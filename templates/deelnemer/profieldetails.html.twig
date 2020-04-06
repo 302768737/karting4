@@ -1,0 +1,55 @@
+{% extends 'deelnemer.html.twig' %}
+{% block menu %}
+    <li><a href="{{ path('activiteiten') }}">home</a></li>
+
+
+{% endblock %}
+
+{% block content %}
+<section >
+    <table class="table" style="table-layout: fixed" >
+        <caption>
+            Welcome, {{ user.username }}
+        </caption>
+        <tbody>
+        <tr>
+            <td>Voorletters:</td>
+            <td>{{ user.voorletters }}</td>
+        </tr>
+        <tr>
+            <td>Tussenvoegsel:</td>
+            <td>{{ user.tussenvoegsel }}</td>
+        </tr>
+        <tr>
+            <td>Achternaam:</td>
+            <td>{{ user.achternaam }}</td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <td>Postcode:</td>
+            <td>{{ user.postcode }}</td>
+        </tr>
+        <tr>
+            <td>Adres:</td>
+            <td>{{ user.adres }}</td>
+        </tr>
+        <tr>
+            <td>Woonplaats:</td>
+            <td>{{ user.woonplaats }}</td>
+        </tr>
+        <tr>
+            <td>Telefoon:</td>
+            <td>{{ user.telefoon }}</td>
+        </tr>
+        </tbody>
+        <tr>
+            <td>Wachtwoord veranderen <a href="{{ path('updatepw') }}" ><span class="glyphicon glyphicon-pencil" style="color:red"></span></a></td>
+        </tr>
+    </table>
+</section>
+
+
+{% endblock %}
